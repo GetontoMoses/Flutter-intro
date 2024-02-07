@@ -7,7 +7,7 @@ class CustomButton extends StatelessWidget {
   final Color buttonColor;
   final double width;
 
-  CustomButton({
+  const CustomButton({
     super.key,
     required this.label,
     required this.onPressed,
