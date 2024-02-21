@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/configurations/constants.dart';
+import 'package:flutter_application_1/views/customButton.dart';
 import 'package:flutter_application_1/views/customtext.dart';
 import 'package:flutter_application_1/views/customtextField.dart';
+import 'package:get/get.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -62,11 +64,24 @@ class Login extends StatelessWidget {
                 suffixIcon: const Icon(Icons.visibility),
               ),
               const SizedBox(height: 20),
-              // const CustomTextButton(
-              //   buttonName: "Log In",
+              CustomButton(
+                  label: "Log In",
+                  onPressed: () {},
+                  buttonColor: primaryColor,
+                  action: navigateToCalculator),
+              // MaterialButton(
+              //   onPressed: ()=> Get.toNamed("/calculator"),
+              //   child: const Text("Log In"),
+              //   height: 50,
+              //   minWidth: 200,
+              //   color: primaryColor,
               // )
             ]),
-            
       ),
     );
-  }}
+  }
+
+  void navigateToCalculator() {
+    Get.toNamed("/home");
+  }
+}
