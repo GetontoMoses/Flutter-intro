@@ -4,6 +4,7 @@ import 'package:flutter_application_1/configurations/constants.dart';
 class CustomButton extends StatelessWidget {
   final String label;
   final Function onPressed;
+  final VoidCallback? action;
   final Color buttonColor;
   final double width;
 
@@ -13,12 +14,13 @@ class CustomButton extends StatelessWidget {
     required this.onPressed,
     this.buttonColor = appGrayColor,
     this.width = 18,
+    this.action,
   });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: action,
       child: Text(label),
       style: ElevatedButton.styleFrom(
         backgroundColor: buttonColor,
