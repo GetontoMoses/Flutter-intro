@@ -15,8 +15,7 @@ class Calculator extends StatelessWidget {
     TextEditingController firstNumber = TextEditingController();
     TextEditingController secondNumber = TextEditingController();
     CalculatorController calculatorController = Get.put(CalculatorController());
-    return Scaffold(
-        body: Padding(
+    return Padding(
       padding: const EdgeInsets.fromLTRB(10, 50, 10, 0),
       child: Column(
         children: [
@@ -49,6 +48,6 @@ class Calculator extends StatelessWidget {
               fontSize: 20)),
         ],
       ),
-    ));
+    );
   }
 }
