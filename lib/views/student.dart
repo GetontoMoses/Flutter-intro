@@ -1,5 +1,5 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart'as http;
 
 var name = ['John Doe', 'me'];
 
@@ -8,7 +8,8 @@ class Student extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
+    return Column(
+      children: [
       ListView.builder(
           shrinkWrap: true,
           itemBuilder: (context, index) {
@@ -26,5 +27,8 @@ class Student extends StatelessWidget {
             );
           })
     ]);
+  }
+  Future<void>? getStudents() async {
+    http.Response response = await http.get(Uri.parse('https:class-26.com/Getonto_students/read.php'));
   }
 }

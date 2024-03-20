@@ -1,17 +1,14 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:flutter_application_1/controllers/homeController.dart';
 import 'package:flutter_application_1/views/calculator.dart';
 import 'package:flutter_application_1/views/student.dart';
 import 'package:get/get.dart';
 
 HomeController homeController = Get.put(HomeController());
-var Screen = [
-  Calculator(),
-  Student()
-];
+var Screen = [Calculator(), Student()];
 
 class Home extends StatelessWidget {
   const Home({super.key});
